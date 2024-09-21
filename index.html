@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Drops - Natural Honey Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Honey Drops</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Honey Drops</h1>
+            <p>Sweeten Your Day with Our Natural Honey Products!</p>
+            <a href="#products" class="cta-button">Explore Our Products</a>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <h2>Our Delicious Honey Selection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/elato.jpg?height=300&width=300" alt="Wildflower Honey">
+                </div>
+                <h3>Μέλι Έλατο</h3>
+                <p>A delightful blend of various flower nectars.</p>
+                <p class="price">$12.99</p>
+                <button onclick="addToCart('Wildflower Honey', 12.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/peyko.jpg?height=300&width=300" alt="Manuka Honey">
+                </div>
+                <h3>Μέλι Πεύκο</h3>
+                <p>Premium honey with unique health benefits.</p>
+                <p class="price">$24.99</p>
+                <button onclick="addToCart('Manuka Honey', 24.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/portokali.jpg?height=300&width=300" alt="Honey Comb">
+                </div>
+                <h3>Μέλι Πορτοκάλι</h3>
+                <p>Raw, unprocessed honeycomb straight from the hive.</p>
+                <p class="price">$15.99</p>
+                <button onclick="addToCart('Honey Comb', 15.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/riki.jpg?height=300&width=300" alt="Lavender Honey">
+                </div>
+                <h3>Μέλι Ρείκι</h3>
+                <p>Smooth honey with a subtle lavender essence.</p>
+                <p class="price">$14.99</p>
+                <button onclick="addToCart('Lavender Honey', 14.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>At Honey Drops, we're passionate about delivering the finest, purest honey straight from nature to your table. Our journey began with a simple love for bees and their incredible work, and it has grown into a commitment to sustainable beekeeping and providing premium honey products.</p>
+            <p>We work closely with local beekeepers who share our values of ethical and environmentally friendly practices. Every jar of honey we offer is a testament to the hard work of our bees and the dedication of our team to preserve the natural goodness of honey.</p>
+            <p>Discover the Honey Drops difference – where quality, flavor, and nature come together in perfect harmony.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 id="contactH">Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
